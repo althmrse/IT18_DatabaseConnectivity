@@ -1,0 +1,4 @@
+repository "IT18_DatabaseConnectivity/IT18_DatabaseConnectivity@18968501718313@cloud"
+  path "/"
+    br "/main"
+    co "/main"
