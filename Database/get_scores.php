@@ -9,8 +9,8 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-// Get the top 10 scores ordered from highest to lowest
-$sql = "SELECT name, score FROM leaderboard ORDER BY score DESC LIMIT 10";
+// Sort by highest score first (DESC), then by oldest time (ASC)
+$sql = "SELECT name, score FROM leaderboard ORDER BY score DESC, submit_date ASC LIMIT 10";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
