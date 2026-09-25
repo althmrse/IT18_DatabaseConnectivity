@@ -20,9 +20,9 @@ Database Management System: Firebase Realtime Database (Cloud NoSQL)
 Architecture: The game uses Unity's UnityWebRequest to communicate directly with the Firebase REST API. It securely sends and receives leaderboard data in JSON format over the cloud, completely eliminating the need for local servers like XAMPP.
 
 **Instructions on How to Run the Prototype**
-1. Download the Game: Navigate to our GitHub repository and download the provided project .zip file containing the compiled game.
+1. Download the Game: Navigate to our GitHub repository and download the provided project .7z archive containing the compiled game.
 
-2. Extract the Files: Right-click the downloaded .zip file and extract/unzip the contents to a folder on your computer.
+2. Extract the Files: Use an archiving tool (like 7-Zip or WinRAR) to extract the .7z file contents into a new folder on your computer.
 
 3. Run the Game: Open the extracted folder and double-click the game's executable file (e.g., .exe) to launch it.
 
