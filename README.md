@@ -1,4 +1,4 @@
-Sketch Jump (Guided Simple Unity Game Prototype)
+Sketch Jump! (Guided Simple Unity Game Prototype)
 
 IT18_J4S
 Members:
@@ -6,42 +6,32 @@ Members:
 - Guico, Alain Kenneth D.
 - Manalo, Althea Merise M.
 
-This project is a 2D endless runner inspired by the classic offline browser dinosaur game. The player controls a dinosaur that
-must jump over endlessly spawning cactus obstacles. As the player survives longer, the game world gradually speeds up,
-increasing the difficulty. The game features a main menu, a dynamic scoring system based on survival time, and a fully
-functional leaderboard that saves and retrieves the top 10 local high scores.
+This project is a 2D endless runner inspired by the classic offline browser dinosaur game. The player controls a dinosaur that must jump over endlessly spawning cactus obstacles. As the player survives longer, the game world gradually speeds up, increasing the difficulty. The game features a main menu, a dynamic scoring system based on survival time, and a fully functional leaderboard that saves and retrieves the top 10 global high scores over the internet.
 
 **Tools and Technologies Used**
 Game Engine: Unity 6.3 LTS (6000.3.24f1)
 Programming Language: C# (Unity Scripting API)
 Version Control: Unity VCS / GitHub (via GitSync)
-Backend API: PHP
+Backend & Database: Firebase Realtime Database (REST API)
 
 **Database or Storage Option Used**
-Database Management System: MySQL
-Local Hosting Environment: XAMPP (Apache and MySQL modules)
-Architecture: The game uses Unity's UnityWebRequest to communicate with standard PHP scripts 
-(submit_score.php and get_scores.php), which execute SQL queries against the local dino_game database.
+Database Management System: Firebase Realtime Database (Cloud NoSQL)
+
+Architecture: The game uses Unity's UnityWebRequest to communicate directly with the Firebase REST API. It securely sends and receives leaderboard data in JSON format over the cloud, completely eliminating the need for local servers like XAMPP.
 
 **Instructions on How to Run the Prototype**
-1. Database Setup
-   - Open XAMPP and start both the Apache and MySQL modules.
-   - Open phpMyAdmin (http://localhost/phpmyadmin) and import the dino_game.sql file located in the Database folder
+1. Download the Game: Navigate to our GitHub repository and download the provided project .zip file containing the compiled game.
 
-2. API Setup
-   - Place the provided submit_score.php and get_scores.php files into your XAMPP htdocs directory.
-  
-3. Running the Game:
-   - Open the project in Unity 6.3 LTS (6000.3.24f1).
-   - Open the Main Scene.
-   - Press the Play button in the Unity Editor.
+2. Extract the Files: Right-click the downloaded .zip file and extract/unzip the contents to a folder on your computer.
+
+3. Run the Game: Open the extracted folder and double-click the game's executable file (e.g., .exe) to launch it.
+
+4. Internet Requirement: Please ensure your computer is connected to the internet so the game can successfully fetch and submit scores to the live global leaderboard.
 
 **Explanation of What Data is Saved and Retrieved**
-- Data Saved (Insert): When the player hits an obstacle, a Game Over panel appears. The player inputs their name, and the game
-  sends a POST request containing the name (String) and the final score (Integer) to the database.
-- Data Retrieved (Select): When the player opens the Leaderboard panel, the game sends a GET request to the database.
-  The database sorts the records by score in descending order and returns a formatted text list of the Top 10 highest scores
-  to be displayed on the UI.
+- Data Saved (Insert): When the player hits an obstacle, a Game Over panel appears. The player inputs their name, and the game sends a POST request to Firebase containing a JSON payload with the player's name (String) and final score (Integer).
+
+- Data Retrieved (Select): When the player opens the Leaderboard panel, the game sends a GET request to Firebase asking for the Top 10 highest scores. The C# script parses the returned JSON data and displays it as a cleanly formatted list on the user interface.
 
 **Known Limitations or Unfinished Parts**
 The game does not have any music or sound effects.
