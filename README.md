@@ -30,8 +30,6 @@ Architecture: The game uses the Firebase SDK to communicate directly with the cl
 
 Instructions on How to Run the Prototype
 
-(Note: No local database or server setup is required, as the game connects automatically to the live Firebase cloud!)
-
 Download the Game: Navigate to our GitHub repository and download the provided project source or compiled build.
 
 Extract the Files: Right-click the downloaded file and extract the contents to a folder on your computer.
@@ -51,3 +49,4 @@ Known Limitations or Unfinished Parts
 The game does not currently feature complete audio, background music, or full voice acting for all narrative branches.
 
 References or Tutorials Used
+Unity documentation and Firebase C# SDK integration guides.
