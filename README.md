@@ -29,14 +29,25 @@ Database Management System: Firebase Realtime Database (Cloud NoSQL)
 Architecture: The game uses the Firebase SDK to communicate directly with the cloud backend. It securely sends and receives player save slot data (including name and 2D position coordinates) in real-time, eliminating the need for local servers like XAMPP.
 
 Instructions on How to Run the Prototype
+Download the Repository:
 
-Download the Game: Navigate to our GitHub repository and download the provided project source or compiled build.
+Navigate to our GitHub repository, click on the Code button, and select Download ZIP (or clone the repository using Git).
 
-Extract the Files: Right-click the downloaded file and extract the contents to a folder on your computer.
+Extract the Files:
 
-Run the Game: Open the folder and double-click the game's executable file (.exe) to launch it.
+Right-click the downloaded .zip file and select Extract All... to unpack the project folder onto your computer.
 
-Internet Requirement: Please ensure your computer is connected to the internet so the game can successfully sync save files to the live cloud database.
+Open in Unity Hub:
+
+Launch Unity Hub, click Add (or Open > Add project from disk), and select the extracted project folder. Ensure you are using the required Unity Editor version if prompted.
+
+Launch and Play:
+
+Open the project, navigate to the Assets/Scenes folder in the Project window, and double-click the main scene file. Click the Play button at the top of the Unity Editor to start the game.
+
+Internet Requirement:
+
+Ensure your computer is connected to the internet before pressing Play so the game can successfully sync save data with the live cloud database.
 
 Explanation of What Data is Saved and Retrieved
 
